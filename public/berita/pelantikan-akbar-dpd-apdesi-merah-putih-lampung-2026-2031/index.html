@@ -1,9 +1,412 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html><head>
-<title>301 Moved Permanently</title>
-</head><body>
-<h1>Moved Permanently</h1>
-<p>The document has moved <a href="http://amp.localhost:8080/berita/?slug=pelantikan-akbar-dpd-apdesi-merah-putih-lampung-2026-2031">here</a>.</p>
-<hr>
-<address>Apache/2.4.68 (Debian) Server at amp.localhost Port 8080</address>
-</body></html>
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pelantikan Akbar DPD APDesi Merah Putih Lampung Periode 2026-2031: Memperkokoh Sinergi dan Transformasi Digital Desa - APDesi Lampung</title>
+    <!-- Favicon APDesi Merah Putih -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/public/images/favicon_amp.png">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" href="/public/images/favicon_amp.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .font-heading { font-family: 'Playfair Display', serif; }
+        
+        /* Redaksional Article Content Typography */
+        .article-body {
+            font-size: 1.0625rem;
+            line-height: 1.85;
+            color: #27272a;
+        }
+        .article-body p {
+            margin-bottom: 1.4rem;
+        }
+        .article-body h2 {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: #18181b;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            line-height: 1.35;
+        }
+        .article-body h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #27272a;
+            margin-top: 1.75rem;
+            margin-bottom: 0.75rem;
+            line-height: 1.35;
+        }
+        .article-body blockquote {
+            border-left: 4px solid #b91c1c;
+            padding: 0.75rem 1.25rem;
+            margin: 1.5rem 0;
+            background-color: #fef2f2;
+            border-radius: 0 1rem 1rem 0;
+            font-style: italic;
+            color: #7f1d1d;
+        }
+        .article-body ul {
+            list-style-type: disc;
+            padding-left: 1.5rem;
+            margin-bottom: 1.25rem;
+        }
+        .article-body ol {
+            list-style-type: decimal;
+            padding-left: 1.5rem;
+            margin-bottom: 1.25rem;
+        }
+        .article-body li {
+            margin-bottom: 0.5rem;
+        }
+        .article-body img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 1rem;
+            margin: 1.5rem auto;
+            display: block;
+            box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.08);
+            border: 1px solid #f4f4f5;
+        }
+        .article-body a {
+            color: #b91c1c;
+            text-decoration: underline;
+            font-weight: 600;
+        }
+        .article-body a:hover {
+            color: #7f1d1d;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 antialiased min-h-screen flex flex-col justify-between">
+
+    <!-- Header Navbar -->
+    <header class="bg-white/95 backdrop-blur-md sticky top-0 z-50 border-b border-gray-100 shadow-sm no-print">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
+
+        <!-- Logo & Brand -->
+        <a href="/" class="flex items-center gap-2.5 sm:gap-3 shrink-0">
+            <img src="/public/images/logo_amp.png" alt="Logo APDesi Merah Putih" class="w-9 h-12 sm:w-11 sm:h-14 object-contain filter drop-shadow">
+            <div>
+                <span class="text-[10px] sm:text-xs font-bold text-red-700 uppercase tracking-widest block leading-none">Provinsi Lampung</span>
+                <h1 class="text-base sm:text-lg font-extrabold text-gray-900 leading-tight">APDESI <span class="text-red-600">MERAH PUTIH</span></h1>
+            </div>
+        </a>
+
+        <!-- Desktop Nav -->
+        <nav class="hidden md:flex items-center gap-7 text-sm font-semibold text-gray-700">
+            <a href="/"        class="hover:text-red-700 transition-colors">Beranda</a>
+            <a href="/profil"  class="hover:text-red-700 transition-colors">Profil Organisasi</a>
+            <a href="/peta-potensi" class="hover:text-red-700 transition-colors">Peta Potensi</a>
+            <a href="/berita"  class="text-red-700 border-b-2 border-red-700 pb-1">Berita</a>
+            <a href="/agenda"  class="hover:text-red-700 transition-colors">Agenda</a>
+            <a href="/galeri"  class="hover:text-red-700 transition-colors">Galeri</a>
+            <a href="/portal-layanan" class="hover:text-red-700 transition-colors">Portal Layanan</a>
+        </nav>
+
+        <!-- CTA Kanan -->
+        <div class="flex items-center gap-2 sm:gap-3 shrink-0">
+                            <a href="/login" class="hidden sm:inline-block px-4 py-2 text-red-700 font-semibold text-sm hover:bg-red-50 rounded-xl transition">Masuk</a>
+                <a href="/registrasi" class="hidden sm:inline-block px-5 py-2.5 bg-gradient-to-r from-red-700 to-red-600 hover:from-red-800 hover:to-red-700 text-white font-semibold rounded-xl text-sm transition shadow-md shadow-red-200">Daftar Anggota</a>
+            
+            <!-- Hamburger Mobile -->
+            <button onclick="document.getElementById('amp-mobile-nav').classList.toggle('hidden')"
+                    class="md:hidden p-2 rounded-xl hover:bg-gray-100 text-gray-700 transition"
+                    aria-label="Buka Menu">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <!-- Mobile Dropdown Nav -->
+    <div id="amp-mobile-nav" class="hidden md:hidden border-t border-gray-100 bg-white">
+        <div class="max-w-7xl mx-auto px-4 py-4 flex flex-col gap-1 text-sm font-semibold">
+            <a href="/"        class="px-3 py-2.5 rounded-xl text-gray-700 hover:bg-gray-50 transition">Beranda</a>
+            <a href="/profil"  class="px-3 py-2.5 rounded-xl text-gray-700 hover:bg-gray-50 transition">Profil Organisasi</a>
+            <a href="/peta-potensi" class="px-3 py-2.5 rounded-xl text-gray-700 hover:bg-gray-50 transition">Peta Potensi</a>
+            <a href="/berita"  class="px-3 py-2.5 rounded-xl bg-red-50 text-red-700 transition">Berita</a>
+            <a href="/agenda"  class="px-3 py-2.5 rounded-xl text-gray-700 hover:bg-gray-50 transition">Agenda</a>
+            <a href="/galeri"  class="px-3 py-2.5 rounded-xl text-gray-700 hover:bg-gray-50 transition">Galeri</a>
+            <a href="/portal-layanan" class="px-3 py-2.5 rounded-xl text-gray-700 hover:bg-gray-50 transition">Portal Layanan</a>
+                        <div class="border-t border-gray-100 mt-2 pt-3 flex gap-2">
+                                    <a href="/login"      class="flex-1 py-2.5 border border-red-600 text-red-700 font-semibold rounded-xl text-center text-sm transition hover:bg-red-50">Masuk</a>
+                    <a href="/registrasi" class="flex-1 py-2.5 bg-red-700 hover:bg-red-800 text-white font-semibold rounded-xl text-center text-sm transition">Daftar</a>
+                            </div>
+        </div>
+    </div>
+</header>
+
+        <!-- =========================================================================
+         SINGLE ARTICLE DETAIL VIEW (REDAKSI KANTOR BERITA)
+         ========================================================================= -->
+    <main class="max-w-4xl mx-auto px-4 py-8 sm:py-12 w-full">
+        <!-- Breadcrumb & Back -->
+        <div class="flex items-center justify-between text-xs mb-6">
+            <a href="/berita" class="font-bold text-red-800 hover:text-red-950 inline-flex items-center gap-1.5 transition">
+                <span>←</span> Indeks Berita & Liputan
+            </a>
+            <span class="text-gray-400">APDesi Merah Putih Press</span>
+        </div>
+
+        <article class="bg-white rounded-3xl p-6 sm:p-10 border border-gray-200 shadow-sm space-y-6">
+            
+            <!-- Category, Headline & Subheadline -->
+            <div class="space-y-3">
+                <div class="flex items-center gap-2">
+                    <span class="px-3 py-1 bg-red-100 text-red-900 text-xs font-black rounded-full uppercase tracking-wider">
+                        Kegiatan DPD                    </span>
+                    <span class="text-xs text-gray-400">•</span>
+                    <span class="text-xs text-gray-500 font-medium">
+                        05 May 2026                    </span>
+                </div>
+
+                <h1 class="text-2xl sm:text-3xl md:text-4xl font-black font-heading text-gray-900 leading-tight">
+                    Pelantikan Akbar DPD APDesi Merah Putih Lampung Periode 2026-2031: Memperkokoh Sinergi dan Transformasi Digital Desa                </h1>
+
+                                <h2 class="text-sm sm:text-base text-gray-600 font-medium leading-snug border-l-4 border-red-700 pl-3">
+                    Ketua Umum Lekad Dulah Adi Putra Tegaskan Komitmen Kolaborasi Tata Kelola Desa Modern dan Advokasi Aparatur Se-Lampung                </h2>
+                
+                <!-- Redaksi Metadata Bar -->
+                <div class="flex flex-wrap items-center justify-between gap-3 text-xs text-gray-500 pt-3 border-t border-gray-100">
+                    <div class="flex items-center gap-3">
+                        <span class="font-semibold text-gray-800">✍️ Biro Humas &amp; Informasi DPD APDesi Lampung</span>
+                                                    <span class="text-gray-400">|</span>
+                            <span>Sumber: <em>Rilis Pers Resmi Pelantikan DPD APDesi Merah Putih Lampung</em></span>
+                                            </div>
+                    <div class="flex items-center gap-3">
+                        <span class="font-bold text-blue-700 bg-blue-50 px-2 py-0.5 rounded-md border border-blue-100">
+                            👁️ 133 views
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Excerpt / Lead Paragraph jika ada -->
+                        <div class="p-4 bg-gradient-to-r from-red-50 to-gray-50 border-l-4 border-red-800 rounded-r-2xl text-sm sm:text-base font-medium text-gray-800 italic leading-relaxed">
+                Dewan Pengurus Daerah (DPD) APDesi Merah Putih Provinsi Lampung periode 2026-2031 resmi dilantik dan dikukuhkan di Bandar Lampung. Momentum ini menegaskan arah baru kedaulatan, perlindungan hukum pamong, dan digitalisasi 2.642 desa se-Lampung.            </div>
+            
+            <!-- Cover Image 16:9 dengan Caption & Kredit -->
+                        <figure class="space-y-2">
+                <div class="w-full aspect-video rounded-2xl overflow-hidden bg-gray-100 border border-gray-200 shadow-sm">
+                    <img src="/public/images/slider/apdesi_pelantikan_berita_acara_utama.jpg" alt="Pelantikan Akbar DPD APDesi Merah Putih Lampung Periode 2026-2031: Memperkokoh Sinergi dan Transformasi Digital Desa" class="w-full h-full object-cover">
+                </div>
+                                <figcaption class="flex flex-col sm:flex-row sm:items-center justify-between text-xs text-gray-500 px-1 italic gap-1">
+                    <span>Prosesi penandatanganan bersama berita acara pelantikan DPD APDesi Merah Putih Provinsi Lampung Periode 2026-2031 di Bandar Lampung.</span>
+                                        <span class="text-gray-400 not-italic font-semibold shrink-0">Foto: Dok. Humas DPD APDesi Merah Putih Lampung</span>
+                                    </figcaption>
+                            </figure>
+            
+            <!-- Article Body (HTML Rich Text) -->
+            <div class="article-body border-b border-gray-100 pb-8">
+                <p><strong>BANDAR LAMPUNG</strong> — Dewan Pengurus Daerah (DPD) Asosiasi Pemerintah Desa Indonesia (APDesi) Merah Putih Provinsi Lampung masa bakti 2026–2031 secara resmi dilantik dan dikukuhkan dalam sebuah upacara akbar yang penuh khidmat dan semarak persatuan di Bandar Lampung, Selasa (5/5/2026).</p>
+
+<p>Pelantikan ini dihadiri oleh jajaran pimpinan daerah, Forkopimda Provinsi Lampung, pengurus Dewan Pimpinan Pusat (DPP) APDesi, serta ratusan perwakilan kepala desa dan pamong desa dari 15 kabupaten/kota se-Provinsi Lampung.</p>
+
+<figure>
+    <img src="/public/images/slider/apdesi_pelantikan_sambutan_ketum.png" alt="Sambutan Ketua Umum Lekad Dulah Adi Putra" class="rounded-2xl shadow-md border border-gray-100">
+    <figcaption class="text-xs text-gray-500 italic mt-2 text-center">Ketua Umum DPD APDesi Merah Putih Provinsi Lampung, Lekad Dulah Adi Putra, S.Pd, menyampaikan pidato arah kebijakan organisasi masa bakti 2026–2031.</figcaption>
+</figure>
+
+<h2>Komitmen Kedaulatan, Kesejahteraan, dan Perlindungan Hukum Pamong</h2>
+<p>Dalam pidato perdananya usai dilantik, Ketua Umum DPD APDesi Merah Putih Provinsi Lampung, <strong>Lekad Dulah Adi Putra, S.Pd</strong>, menegaskan bahwa kepengurusan baru ini mengusung misi besar membawa desa-desa di Lampung menjadi pelopor pembangunan nasional yang mandiri, berdaya saing, dan berkeadilan sosial.</p>
+
+<blockquote>"APDesi Merah Putih hadir bukan sekadar sebagai organisasi paguyuban, melainkan rumah besar perjuangan aspirasi kepala desa dan pamong desa. Kami berkomitmen memberikan perlindungan hukum yang preventif, penguatan kapasitas aparatur, serta pendampingan nyata tata kelola keuangan desa yang akuntabel," tegas Lekad Dulah Adi Putra disambut riuh tepuk tangan hadirin.</blockquote>
+
+<figure>
+    <img src="/public/images/slider/apdesi_pelantikan_penyematan_rompi.png" alt="Penyematan Rompi Kehormatan APDesi" class="rounded-2xl shadow-md border border-gray-100">
+    <figcaption class="text-xs text-gray-500 italic mt-2 text-center">Momen sakral penyematan rompi dinas kehormatan APDesi Merah Putih kepada pimpinan daerah sebagai simbol kemitraan strategis pemprov dan desa.</figcaption>
+</figure>
+
+<h2>Akselerasi Digitalisasi Desa & Satu Data Indonesia (UU SDI)</h2>
+<p>Salah satu terobosan strategis yang dicanangkan pada periode ini adalah integrasi ekosistem desa digital terpadu melalui platform Sistem Elektronik Data Desa (SEDESA / APIDesa) yang didukung teknologi xoSID Supradesa. Melalui ekosistem ini, integrasi data presisi, administrasi kependudukan, hingga keterbukaan informasi publik desa dapat terhubung secara berkesinambungan.</p>
+
+<p>APDesi Merah Putih Lampung juga memprioritaskan revitalisasi Badan Usaha Milik Desa (BUMDes) untuk menggerakkan rantai pasok ekonomi pangan dan komoditas unggulan desa Lampung langsung ke pasar regional maupun nasional.</p>
+
+<figure>
+    <img src="/public/images/slider/apdesi_pelantikan_tamu_kehormatan.png" alt="Tamu Kehormatan dan Tokoh Daerah" class="rounded-2xl shadow-md border border-gray-100">
+    <figcaption class="text-xs text-gray-500 italic mt-2 text-center">Deretan pimpinan daerah dan tamu kehormatan menyimak dengan seksama agenda pelantikan pengurus DPD APDesi Lampung.</figcaption>
+</figure>
+
+<h2>Penandatanganan Berita Acara & Soliditas 2.642 Desa</h2>
+<p>Rangkaian acara diakhiri dengan prosesi penandatanganan berita acara dan ikrar pelantikan secara serentak, disusul dengan sesi doa bersama untuk keberkahan kemajuan masyarakat perdesaan di Sai Bumi Ruwa Jurai.</p>
+
+<figure>
+    <img src="/public/images/slider/apdesi_pelantikan_prosesi_ttd.png" alt="Prosesi Penandatanganan Berita Acara Pelantikan" class="rounded-2xl shadow-md border border-gray-100">
+    <figcaption class="text-xs text-gray-500 italic mt-2 text-center">Penandatanganan naskah pelantikan pengurus DPD APDesi Merah Putih Provinsi Lampung Periode 2026–2031.</figcaption>
+</figure>
+
+<p>Dengan resminya pelantikan ini, DPD APDesi Merah Putih Provinsi Lampung segera menggelar Rapat Kerja Daerah (Rakerda) perdana guna merumuskan program kerja teknis di bidang advokasi hukum, pelatihan aparatur, dan digitalisasi desa di seluruh penjuru Lampung.</p>            </div>
+
+            <!-- Tags / Topik Terkait -->
+                        <div class="space-y-2">
+                <span class="text-xs font-extrabold text-gray-500 uppercase tracking-wider block">Topik Terkait:</span>
+                <div class="flex flex-wrap gap-2">
+                                            <span class="px-3 py-1 bg-gray-100 hover:bg-red-50 text-gray-700 hover:text-red-800 rounded-xl text-xs font-semibold border border-gray-200 transition">
+                            #apdesi                        </span>
+                                            <span class="px-3 py-1 bg-gray-100 hover:bg-red-50 text-gray-700 hover:text-red-800 rounded-xl text-xs font-semibold border border-gray-200 transition">
+                            #pelantikan dpd                        </span>
+                                            <span class="px-3 py-1 bg-gray-100 hover:bg-red-50 text-gray-700 hover:text-red-800 rounded-xl text-xs font-semibold border border-gray-200 transition">
+                            #lampung                        </span>
+                                            <span class="px-3 py-1 bg-gray-100 hover:bg-red-50 text-gray-700 hover:text-red-800 rounded-xl text-xs font-semibold border border-gray-200 transition">
+                            #lekad dulah adi putra                        </span>
+                                            <span class="px-3 py-1 bg-gray-100 hover:bg-red-50 text-gray-700 hover:text-red-800 rounded-xl text-xs font-semibold border border-gray-200 transition">
+                            #satu data indonesia                        </span>
+                                            <span class="px-3 py-1 bg-gray-100 hover:bg-red-50 text-gray-700 hover:text-red-800 rounded-xl text-xs font-semibold border border-gray-200 transition">
+                            #digitalisasi desa                        </span>
+                                    </div>
+            </div>
+            
+            <!-- Bagikan Berita (Share Widget) -->
+            <div class="bg-gray-50 p-4 rounded-2xl border border-gray-200 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                <span class="text-xs font-bold text-gray-700">Bagikan Liputan Ini:</span>
+                <div class="flex items-center gap-2">
+                    <a href="https://api.whatsapp.com/send?text=Pelantikan+Akbar+DPD+APDesi+Merah+Putih+Lampung+Periode+2026-2031%3A+Memperkokoh+Sinergi+dan+Transformasi+Digital+Desa+-+http%3A%2F%2Famp.localhost%3A8080%2Fberita%3Fslug%3Dpelantikan-akbar-dpd-apdesi-merah-putih-lampung-2026-2031" target="_blank" class="px-3 py-1.5 bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl text-xs font-bold transition flex items-center gap-1.5 shadow-sm">
+                        <span>💬</span> WhatsApp
+                    </a>
+                    <button onclick="navigator.clipboard.writeText(window.location.href); alert('Tautan berita berhasil disalin ke papan klip!');" class="px-3 py-1.5 bg-gray-200 hover:bg-gray-300 text-gray-800 rounded-xl text-xs font-bold transition flex items-center gap-1.5">
+                        <span>🔗</span> Salin Tautan
+                    </button>
+                </div>
+            </div>
+
+        </article>
+
+        <!-- Berita Terkait Lainnya -->
+                <div class="mt-12 space-y-4">
+            <h3 class="text-lg font-black font-heading text-gray-900 border-l-4 border-red-800 pl-3">
+                Kabar Terbaru Lainnya
+            </h3>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+                                <div class="bg-white rounded-2xl overflow-hidden border border-gray-200 shadow-sm hover:shadow-md transition flex flex-col">
+                                        <div class="p-4 flex-grow flex flex-col justify-between space-y-2">
+                        <div>
+                            <span class="text-[10px] font-bold text-red-800 uppercase">Kegiatan DPD</span>
+                            <h4 class="font-bold text-xs text-gray-900 hover:text-red-700 transition line-clamp-2 mt-1">
+                                <a href="/berita?slug=peluncuran-kanal-berita-redaksi-apdesi-lampung">
+                                    Peluncuran Kanal Berita Redaksi APDesi Lampung                                </a>
+                            </h4>
+                        </div>
+                        <div class="text-[10px] text-gray-400 pt-2 border-t border-gray-100 flex items-center justify-between">
+                            <span>📅 24 Oct 2026</span>
+                            <span>👁️ 2</span>
+                        </div>
+                    </div>
+                </div>
+                                <div class="bg-white rounded-2xl overflow-hidden border border-gray-200 shadow-sm hover:shadow-md transition flex flex-col">
+                                        <div class="p-4 flex-grow flex flex-col justify-between space-y-2">
+                        <div>
+                            <span class="text-[10px] font-bold text-red-800 uppercase">Pengumuman</span>
+                            <h4 class="font-bold text-xs text-gray-900 hover:text-red-700 transition line-clamp-2 mt-1">
+                                <a href="/berita?slug=konsolidasi-organisasi-apdesi-merah-putih-lampung">
+                                    Konsolidasi Organisasi APDesi Merah Putih Lampung Perkuat Digitalisasi 2.642 Desa                                </a>
+                            </h4>
+                        </div>
+                        <div class="text-[10px] text-gray-400 pt-2 border-t border-gray-100 flex items-center justify-between">
+                            <span>📅 20 Aug 2026</span>
+                            <span>👁️ 0</span>
+                        </div>
+                    </div>
+                </div>
+                                <div class="bg-white rounded-2xl overflow-hidden border border-gray-200 shadow-sm hover:shadow-md transition flex flex-col">
+                                        <div class="p-4 flex-grow flex flex-col justify-between space-y-2">
+                        <div>
+                            <span class="text-[10px] font-bold text-red-800 uppercase">Pelatihan</span>
+                            <h4 class="font-bold text-xs text-gray-900 hover:text-red-700 transition line-clamp-2 mt-1">
+                                <a href="/berita?slug=bimtek-pengelolaan-keuangan-siskeudes-transparan">
+                                    Bimtek Pengelolaan Keuangan &amp; Siskeudes Transparan bagi Perangkat Desa                                </a>
+                            </h4>
+                        </div>
+                        <div class="text-[10px] text-gray-400 pt-2 border-t border-gray-100 flex items-center justify-between">
+                            <span>📅 18 Aug 2026</span>
+                            <span>👁️ 0</span>
+                        </div>
+                    </div>
+                </div>
+                            </div>
+        </div>
+        
+    </main>
+
+    
+    <!-- Footer -->
+    <footer class="bg-red-950 text-red-200 text-center py-6 text-xs border-t border-red-900 mt-12">
+        <p>&copy; 2026 APDesi Merah Putih Lampung. Powered by xoSID Supradesa.</p>
+    </footer>
+
+    <!-- Slider Script -->
+    <script>
+        (function() {
+            let currentBeritaSlide = 0;
+            const slides = document.querySelectorAll('.berita-slide');
+            const dots = document.querySelectorAll('.berita-slider-dot');
+            let slideInterval = null;
+
+            if (slides.length === 0) return;
+
+            function showBeritaSlide(index) {
+                if (index >= slides.length) index = 0;
+                if (index < 0) index = slides.length - 1;
+                currentBeritaSlide = index;
+
+                slides.forEach((s, i) => {
+                    if (i === currentBeritaSlide) {
+                        s.classList.remove('opacity-0', 'pointer-events-none', 'z-0');
+                        s.classList.add('opacity-100', 'z-10');
+                    } else {
+                        s.classList.remove('opacity-100', 'z-10');
+                        s.classList.add('opacity-0', 'pointer-events-none', 'z-0');
+                    }
+                });
+
+                dots.forEach((d, i) => {
+                    if (i === currentBeritaSlide) {
+                        d.classList.remove('bg-white/40');
+                        d.classList.add('bg-white');
+                    } else {
+                        d.classList.remove('bg-white');
+                        d.classList.add('bg-white/40');
+                    }
+                });
+            }
+
+            window.nextBeritaSlide = function() {
+                showBeritaSlide(currentBeritaSlide + 1);
+            };
+
+            window.prevBeritaSlide = function() {
+                showBeritaSlide(currentBeritaSlide - 1);
+            };
+
+            window.gotoBeritaSlide = function(idx) {
+                showBeritaSlide(idx);
+            };
+
+            function startAutoPlay() {
+                if (!slideInterval) {
+                    slideInterval = setInterval(window.nextBeritaSlide, 5000);
+                }
+            }
+
+            function stopAutoPlay() {
+                if (slideInterval) {
+                    clearInterval(slideInterval);
+                    slideInterval = null;
+                }
+            }
+
+            const container = document.getElementById('berita-slider-container');
+            if (container) {
+                container.addEventListener('mouseenter', stopAutoPlay);
+                container.addEventListener('mouseleave', startAutoPlay);
+            }
+
+            startAutoPlay();
+        })();
+    </script>
+
+</body>
+</html>
