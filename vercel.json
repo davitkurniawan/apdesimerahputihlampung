@@ -1,17 +1,17 @@
 {
-  "functions": {
-    "api/*.php": {
-      "runtime": "vercel-php@0.9.0"
-    }
-  },
-  "routes": [
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "rewrites": [
     {
-      "src": "/(public|assets|desa|themes)/(.*)",
-      "dest": "/$1/$2"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/api/index.php"
+      "source": "/berita",
+      "has": [
+        {
+          "type": "query",
+          "key": "slug",
+          "value": "pelantikan-akbar-dpd-apdesi-merah-putih-lampung-2026-2031"
+        }
+      ],
+      "destination": "/berita/pelantikan-akbar-dpd-apdesi-merah-putih-lampung-2026-2031"
     }
   ]
 }
