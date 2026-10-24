@@ -1,0 +1,96 @@
+{
+    "debug_info": [
+        {
+            "page": "\/index.php\/database",
+            "http": 200,
+            "forms": 0,
+            "csrf": "d5034428...",
+            "snippet": "Sistem Informasi Desa Bondo - Database SID OpenSID Toggle navigation 1 Anda memiliki notifikasi baru Permohonan Surat Masuk Permohonan surat Keterangan Domisili dari Mursinin Suryono menunggu persetuj"
+        },
+        {
+            "try": "GET \/database\/exec_backup?force_all=1",
+            "http": 200,
+            "size": 51030979,
+            "type": "application\/octet-stream",
+            "zip": false,
+            "sql": false,
+            "html": false,
+            "source": "\/index.php\/database"
+        }
+    ],
+    "curl_error": "",
+    "discovered": [
+        {
+            "url": "https:\/\/berputar.opendesa.id\/database\/exec_backup?force_all=1",
+            "method": "GET",
+            "csrf": "",
+            "source": "\/index.php\/database"
+        },
+        {
+            "url": "https:\/\/berputar.opendesa.id\/database\/desa_backup",
+            "method": "GET",
+            "csrf": "",
+            "source": "\/index.php\/database"
+        },
+        {
+            "url": "https:\/\/berputar.opendesa.id\/index.php\/database\/exec_backup",
+            "method": "GET",
+            "csrf": "",
+            "source": "manual"
+        },
+        {
+            "url": "https:\/\/berputar.opendesa.id\/index.php\/database\/exec_backup?force_all=1",
+            "method": "GET",
+            "csrf": "",
+            "source": "manual"
+        },
+        {
+            "url": "https:\/\/berputar.opendesa.id\/database\/exec_backup",
+            "method": "GET",
+            "csrf": "",
+            "source": "manual"
+        },
+        {
+            "url": "https:\/\/berputar.opendesa.id\/database\/exec_backup?force_all=1",
+            "method": "GET",
+            "csrf": "",
+            "source": "manual"
+        },
+        {
+            "url": "https:\/\/berputar.opendesa.id\/index.php\/database\/backup",
+            "method": "POST",
+            "csrf": "d503442820e216029a1319886a624242",
+            "source": "manual"
+        },
+        {
+            "url": "https:\/\/berputar.opendesa.id\/index.php\/database\/backup_naik",
+            "method": "POST",
+            "csrf": "d503442820e216029a1319886a624242",
+            "source": "manual"
+        },
+        {
+            "url": "https:\/\/berputar.opendesa.id\/index.php\/database\/backup_naik",
+            "method": "GET",
+            "csrf": "",
+            "source": "manual"
+        },
+        {
+            "url": "https:\/\/berputar.opendesa.id\/database\/backup",
+            "method": "POST",
+            "csrf": "d503442820e216029a1319886a624242",
+            "source": "manual"
+        },
+        {
+            "url": "https:\/\/berputar.opendesa.id\/database\/backup_naik",
+            "method": "POST",
+            "csrf": "d503442820e216029a1319886a624242",
+            "source": "manual"
+        },
+        {
+            "url": "https:\/\/berputar.opendesa.id\/database\/backup_naik",
+            "method": "GET",
+            "csrf": "",
+            "source": "manual"
+        }
+    ]
+}

@@ -1,0 +1,13 @@
+=== EXCEPTION DETECTED ===
+Class: Illuminate\Contracts\Container\BindingResolutionException
+Message: Target class [config] does not exist.
+File: /var/www/html/vendor/laravel/framework/src/Illuminate/Container/Container.php
+Line: 1127
+
+Trace:
+#0 /var/www/html/vendor/laravel/framework/src/Illuminate/Container/Container.php(936): Illuminate\Container\Container->build('config')
+#1 /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1078): Illuminate\Container\Container->resolve('config', Array, true)
+#2 /var/www/html/vendor/laravel/framework/src/Illuminate/Container/Container.php(864): Illuminate\Foundation\Application->resolve('config', Array)
+#3 /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1058): Illuminate\Container\Container->make('config', Array)
+#4 /var/www/html/index.php(438): Illuminate\Foundation\Application->make('config')
+#5 {main}

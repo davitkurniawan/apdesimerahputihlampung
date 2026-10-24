@@ -1,0 +1,6 @@
+total 8
+drwxrwxrwt 2 www-data www-data 4096 May 19 23:14 .
+drwxr-xr-x 1 root     root     4096 May 19 23:14 ..
+lrwxrwxrwx 1 www-data www-data   11 May 19 23:14 access.log -> /dev/stdout
+lrwxrwxrwx 1 www-data www-data   11 May 19 23:14 error.log -> /dev/stderr
+lrwxrwxrwx 1 www-data www-data   11 May 19 23:14 other_vhosts_access.log -> /dev/stdout

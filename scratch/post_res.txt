@@ -1,0 +1,15 @@
+HTTP/1.1 100 Continue
+
+HTTP/1.1 302 Found
+Date: Wed, 03 Jun 2026 10:41:17 GMT
+Server: Apache/2.4.67 (Debian)
+X-Powered-By: PHP/8.2.31
+Set-Cookie: xosid_logged_out=deleted; expires=Thu, 01 Jan 1970 00:00:01 GMT; Max-Age=0; path=/
+Expires: Thu, 19 Nov 1981 08:52:00 GMT
+Cache-Control: no-store, no-cache, must-revalidate
+Pragma: no-cache
+Set-Cookie: sidcsrf=4ab46747bc47283d2f3e4076bddbb58f; expires=Wed, 03 Jun 2026 12:41:18 GMT; Max-Age=7200; path=/; SameSite=Lax
+Location: http://bumidaya.localhost:8080/index.php/penduduk
+Content-Length: 0
+Content-Type: text/html; charset=UTF-8
+

@@ -1,0 +1,21 @@
+# Vercel Deployment Exclusions
+storage/logs/
+storage/app/
+storage/uploads/
+storage/invoices/
+storage/debugbar/
+storage/framework/cache/
+storage/framework/sessions/
+storage/framework/views/
+storage/xosid_backups/
+xosid_backups/
+.git/
+.agents/
+.github/
+*.sql
+*.csv
+docker-compose*.yml
+Dockerfile*
+bin/
+tests/
+scratch/

@@ -1,0 +1,63 @@
+@php
+    $themeVersion = 'v2409.0.0';
+@endphp
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    @include('theme::commons.meta')
+    @include('theme::commons.source_css')
+    @include('theme::commons.source_js')
+    <title>@yield('title')</title>
+    @stack('styles')
+    <!-- Early theme resolver script to prevent flicker -->
+    <script type="text/javascript">
+        (function() {
+            const savedTheme = localStorage.getItem('xosid-theme') || 'dark';
+            if (savedTheme === 'light') {
+                document.documentElement.classList.add('light-mode');
+            } else {
+                document.documentElement.classList.remove('light-mode');
+            }
+        })();
+    </script>
+</head>
+
+<body class="font-primary bg-[#070a13] text-gray-200 antialiased overflow-x-hidden">
+    <!-- XOSID NEURAL GRID BACKGROUND -->
+    <div class="neural-space-bg">
+        <div class="ambient-glow-1"></div>
+        <div class="ambient-glow-2"></div>
+    </div>
+    @include('theme::commons.loading_screen')
+    @include('theme::commons.header')
+
+    @yield('layout')
+
+    @include('theme::commons.footer')
+
+    <script src="{{ theme_asset('js/script.min.js') }}&{{ $themeVersion }}"></script>
+    <script type="text/javascript">
+        function formatRupiah(angka, prefix = 'Rp ') {
+            if (angka === null || angka === undefined) return (prefix ?? 'Rp ') + '0,00';
+            var number_string = angka.toString().replace(/[^,\d]/g, ''),
+                split = number_string.split(','),
+                sisa = split[0].length % 3,
+                rupiah = split[0].substr(0, sisa),
+                ribuan = split[0].substr(sisa).match(/\d{3}/gi);
+
+            if (ribuan) {
+                separator = sisa ? '.' : '';
+                rupiah += separator + ribuan.join('.');
+            }
+
+            rupiah = split[1] != undefined ? rupiah + ',' + split[1] : rupiah;
+            return prefix == undefined ? rupiah : (rupiah ? 'Rp ' + rupiah : '') + ',00';
+        }
+    </script>
+    @stack('scripts')
+</body>
+
+</html>

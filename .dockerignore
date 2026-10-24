@@ -1,0 +1,8 @@
+storage/logs/*
+storage/framework/cache/*
+vendor/
+.git/
+node_modules/
+*.log
+scratch/
+xosid_backups/

@@ -1,0 +1,65 @@
+@extends('layanan_mandiri.auth.index')
+
+@section('content')
+    <form id="validasi" autocomplete="off" action="{{ $form_action }}" method="post" class="login-form">
+        <div class="form-group form-login">
+            <input type="text" autocomplete="off" class="form-control angka required {!! jecho($cek_anjungan['keyboard'] == 1, true, 'kbvnumber') !!}" name="nik" maxlength="16" placeholder="NIK">
+        </div>
+        {{-- Hidden input for UUID from local storage --}}
+        <input type="hidden" name="anjungan_uuid" id="anjungan_uuid">
+        <div class="form-group form-login">
+            <input
+                type="password"
+                autocomplete="off"
+                class="form-control angka required {!! jecho($cek_anjungan['keyboard'] == 1, true, 'kbvnumber') !!}"
+                name="password"
+                placeholder="PIN"
+                id="pin"
+                maxlength="6"
+            >
+        </div>
+        <div class="form-group">
+            <center><input type="checkbox" id="checkbox" style="display: initial;"> <label for="checkbox">Tampilkan PIN</label></center>
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn btn-block btn-primary"><b>MASUK</b></button>
+        </div>
+        <div class="form-group">
+            <a href="{{ site_url('layanan-mandiri/masuk-ektp') }}" class="btn btn-block bg-green" style="display: flex; align-items: center; justify-content: center; text-decoration: none;">
+                <b>MASUK DENGAN E-KTP</b>
+            </a>
+        </div>
+        @if (setting('tampilkan_pendaftaran'))
+            <div class="form-group">
+                <a href="{{ site_url('layanan-mandiri/daftar') }}" class="btn btn-block bg-green" style="display: flex; align-items: center; justify-content: center; text-decoration: none;">
+                    <b>DAFTAR</b>
+                </a>
+            </div>
+        @endif
+        <div class="form-group">
+            <a href="{{ site_url('layanan-mandiri/lupa-pin') }}" class="btn btn-block bg-green" style="display: flex; align-items: center; justify-content: center; text-decoration: none;">
+                <b>LUPA PIN</b>
+            </a>
+        </div>
+        <div id="anjungan-button-container">
+            {{-- Tombol Anjungan akan dimuat di sini oleh JavaScript --}}
+        </div>
+    </form>
+@endsection
+
+@include('layanan_mandiri.auth.anjungan-ajax')
+
+@push('script')
+    <script type="text/javascript">
+        $('document').ready(function() {
+            var pass = $("#pin");
+            $('#checkbox').click(function() {
+                if (pass.attr('type') === "password") {
+                    pass.attr('type', 'text');
+                } else {
+                    pass.attr('type', 'password')
+                }
+            });
+        });
+    </script>
+@endpush

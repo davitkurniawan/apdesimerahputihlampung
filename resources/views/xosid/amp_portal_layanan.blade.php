@@ -1,0 +1,173 @@
+<?php
+if (session_status() === PHP_SESSION_NONE && !headers_sent()) {
+    @session_start();
+}
+$amp_active_menu = "layanan";
+require_once __DIR__ . '/../../../xosid_ajax_db.php';
+?>
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal Layanan - APDesi Merah Putih Lampung</title>
+    <!-- Favicon APDesi Merah Putih -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/public/images/favicon_amp.png">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" href="/public/images/favicon_amp.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .font-heading { font-family: 'Playfair Display', serif; }
+        
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 antialiased min-h-screen flex flex-col justify-between">
+
+    <!-- Navbar -->
+    <?php require __DIR__ . "/amp_header_partial.php"; ?>
+
+    <!-- Main Content -->
+    <main class="flex-grow">
+        
+        <!-- Header Section -->
+        <div class="bg-gradient-to-br from-red-800 to-red-950 py-20 relative overflow-hidden">
+            <!-- decorative bg -->
+            <div class="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-white via-transparent to-transparent"></div>
+            
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+                <span class="px-4 py-1.5 bg-red-700/50 text-red-100 font-bold rounded-full text-xs uppercase tracking-widest border border-red-500/50 inline-block mb-4">Integrasi Ekosistem</span>
+                <h1 class="text-4xl md:text-5xl font-black text-white font-heading tracking-tight mb-6 drop-shadow-sm">Portal Layanan Terpadu</h1>
+                <p class="text-red-100 max-w-2xl mx-auto text-base md:text-lg leading-relaxed">
+                    Akses terpusat ke berbagai layanan dasar, tata kelola pemerintahan, hingga ekosistem kemitraan untuk kemajuan desa-desa di Lampung.
+                </p>
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-10 relative z-20 mb-20 space-y-16">
+            
+            <!-- SECTION 1 -->
+            <div class="bg-white p-8 md:p-12 rounded-3xl shadow-xl border border-gray-100">
+                <div class="text-center max-w-3xl mx-auto mb-12">
+                    <h2 class="text-3xl font-extrabold font-heading text-gray-900 mb-4">Layanan & Tata Kelola</h2>
+                    <div class="h-1 w-20 bg-red-600 rounded-full mx-auto"></div>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Card 1 -->
+                    <div class="bg-gray-50 rounded-2xl p-6 border border-gray-100 card-hover transition duration-300 group cursor-pointer">
+                        <div class="w-14 h-14 bg-red-100 text-red-700 rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:bg-red-600 group-hover:text-white transition">🏥</div>
+                        <h3 class="text-lg font-bold text-gray-900 mb-2">Layanan Dasar</h3>
+                        <p class="text-sm text-gray-500 leading-relaxed">Akses pendataan dan pemenuhan layanan dasar kesehatan, pendidikan, serta fasilitas esensial masyarakat desa.</p>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="bg-gray-50 rounded-2xl p-6 border border-gray-100 card-hover transition duration-300 group cursor-pointer">
+                        <div class="w-14 h-14 bg-blue-100 text-blue-700 rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:bg-blue-600 group-hover:text-white transition">🤝</div>
+                        <h3 class="text-lg font-bold text-gray-900 mb-2">Sosial</h3>
+                        <p class="text-sm text-gray-500 leading-relaxed">Integrasi data bantuan sosial, jaring pengaman masyarakat, dan pelaporan kondisi rentan di lingkungan desa.</p>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="bg-gray-50 rounded-2xl p-6 border border-gray-100 card-hover transition duration-300 group cursor-pointer">
+                        <div class="w-14 h-14 bg-emerald-100 text-emerald-700 rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:bg-emerald-600 group-hover:text-white transition">📈</div>
+                        <h3 class="text-lg font-bold text-gray-900 mb-2">Ekonomi</h3>
+                        <p class="text-sm text-gray-500 leading-relaxed">Pengembangan UMKM, pengawasan BUMDes, pasar desa, serta sentra pertumbuhan ekonomi lokal berbasis potensi desa.</p>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="bg-gray-50 rounded-2xl p-6 border border-gray-100 card-hover transition duration-300 group cursor-pointer">
+                        <div class="w-14 h-14 bg-green-100 text-green-700 rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:bg-green-600 group-hover:text-white transition">🌳</div>
+                        <h3 class="text-lg font-bold text-gray-900 mb-2">Lingkungan</h3>
+                        <p class="text-sm text-gray-500 leading-relaxed">Tata kelola kelestarian desa, mitigasi bencana, pengelolaan sampah, serta inovasi desa ramah lingkungan.</p>
+                    </div>
+
+                    <!-- Card 5 -->
+                    <div class="bg-gray-50 rounded-2xl p-6 border border-gray-100 card-hover transition duration-300 group cursor-pointer">
+                        <div class="w-14 h-14 bg-purple-100 text-purple-700 rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:bg-purple-600 group-hover:text-white transition">🛣️</div>
+                        <h3 class="text-lg font-bold text-gray-900 mb-2">Aksebilitas</h3>
+                        <p class="text-sm text-gray-500 leading-relaxed">Informasi pembangunan infrastruktur, jaringan jalan desa, jembatan, serta konektivitas fisik maupun internet desa.</p>
+                    </div>
+
+                    <!-- Card 6 -->
+                    <div class="bg-gray-50 rounded-2xl p-6 border border-gray-100 card-hover transition duration-300 group cursor-pointer relative overflow-hidden">
+                        <div class="absolute -right-6 -top-6 w-24 h-24 bg-gradient-to-br from-indigo-500 to-cyan-400 rounded-full opacity-10 group-hover:scale-150 transition duration-500"></div>
+                        <div class="w-14 h-14 bg-indigo-100 text-indigo-700 rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:bg-indigo-600 group-hover:text-white transition relative z-10">💻</div>
+                        <h3 class="text-lg font-bold text-gray-900 mb-2 relative z-10">Digitalisasi Tata Kelola Pemerintahan Desa</h3>
+                        <p class="text-sm text-gray-500 leading-relaxed relative z-10">Transisi administrasi desa menuju sistem cerdas, tata naskah dinas elektronik, dan otomasi pelayanan warga.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SECTION 2 -->
+            <div class="mb-12">
+                <div class="flex items-center gap-4 mb-8">
+                    <h2 class="text-2xl font-extrabold font-heading text-gray-900">Ekosistem & Program Inovasi</h2>
+                    <div class="flex-grow h-px bg-gray-200"></div>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-6">
+                    <!-- Ecosystem Card 1 -->
+                    <a href="/login" class="flex flex-col sm:flex-row bg-white rounded-2xl p-5 border border-gray-200 shadow-sm hover:shadow-md hover:border-red-200 transition group">
+                        <div class="w-16 h-16 bg-gradient-to-br from-red-600 to-rose-900 rounded-2xl flex items-center justify-center text-white text-2xl shrink-0 mb-4 sm:mb-0 sm:mr-5 shadow-inner">
+                            🌐
+                        </div>
+                        <div>
+                            <div class="flex items-center gap-2 mb-1">
+                                <h3 class="text-lg font-bold text-gray-900 group-hover:text-red-700 transition">Portal Ekosistem Desa Digital - Sistem Elektronik Data Desa (SEDESA)</h3>
+                                <span class="px-2 py-0.5 bg-red-100 text-red-800 text-[10px] font-bold rounded-full">Nasional</span>
+                            </div>
+                            <p class="text-sm text-gray-500">Integrasi penuh ke dalam jaringan Sistem Elektronik Data Desa (SEDESA). Portal geospasial, keterbukaan data desa, statistik kependudukan, serta pelayanan administrasi desa yang saling terhubung.</p>
+                        </div>
+                    </a>
+
+                    <!-- Ecosystem Card 2 -->
+                    <div class="flex flex-col sm:flex-row bg-white rounded-2xl p-5 border border-gray-200 shadow-sm hover:shadow-md hover:border-emerald-200 transition group cursor-pointer">
+                        <div class="w-16 h-16 bg-gradient-to-br from-emerald-500 to-teal-400 rounded-2xl flex items-center justify-center text-white text-2xl shrink-0 mb-4 sm:mb-0 sm:mr-5 shadow-inner">
+                            📦
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold text-gray-900 group-hover:text-emerald-700 transition mb-1">Produk Unggulan Desa</h3>
+                            <p class="text-sm text-gray-500">Etalase digital BUMDes Hagtou yang mengintegrasikan rantai pasok antar-desa untuk pemasaran produk komoditas unggulan daerah secara masif.</p>
+                        </div>
+                    </div>
+
+                    <!-- Ecosystem Card 3 -->
+                    <div class="flex flex-col sm:flex-row bg-white rounded-2xl p-5 border border-gray-200 shadow-sm hover:shadow-md hover:border-blue-200 transition group cursor-pointer">
+                        <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-indigo-400 rounded-2xl flex items-center justify-center text-white text-2xl shrink-0 mb-4 sm:mb-0 sm:mr-5 shadow-inner">
+                            💡
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold text-gray-900 group-hover:text-blue-700 transition mb-1">Usulan Program Desa</h3>
+                            <p class="text-sm text-gray-500">Fasilitas pengajuan, rancangan, dan musrenbang desa untuk memastikan arah pembangunan selaras dengan aspirasi perangkat desa.</p>
+                        </div>
+                    </div>
+
+                    <!-- Ecosystem Card 4 -->
+                    <div class="flex flex-col sm:flex-row bg-white rounded-2xl p-5 border border-gray-200 shadow-sm hover:shadow-md hover:border-amber-200 transition group cursor-pointer">
+                        <div class="w-16 h-16 bg-gradient-to-br from-amber-400 to-yellow-500 rounded-2xl flex items-center justify-center text-white text-2xl shrink-0 mb-4 sm:mb-0 sm:mr-5 shadow-inner">
+                            🤝
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold text-gray-900 group-hover:text-amber-600 transition mb-1">Kemitraan</h3>
+                            <p class="text-sm text-gray-500">Jejaring relasi, CSR, kolaborasi antar lembaga pemerintah dan swasta dalam rangka mendukung kesejahteraan serta kemandirian desa.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-gray-200 text-center py-6 text-xs text-gray-500">
+        &copy; 2026 APDesi Merah Putih Lampung. Powered by xoSID Supradesa.
+    </footer>
+
+</body>
+</html>

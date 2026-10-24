@@ -1,0 +1,82 @@
+# .xosid_protected
+# File dan direktori XOSID yang TIDAK BOLEH ditimpa oleh update upstream OpenSID.
+# Digunakan oleh rsync --exclude-from='.xosid_protected' saat update.
+# Tambahkan entri baru setiap kali ada file XOSID baru yang dibuat.
+
+# === ENTRY POINT & SYSTEM CONFIG ===
+index.php
+.agents/
+.env
+.dockerignore
+Dockerfile
+docker-compose.yml
+DatabaseManager_new.php
+current_bottom.php
+
+# === FILE XOSID SAAS & APIS ===
+xosid_*.php
+xosid_*.sh
+xosid_*.md
+xosid_*.sql
+xosid-esensial/
+xosid_backups/
+hagtou_*
+patch_*
+debug_hook.php
+test_db.php
+
+# === CONTROLLERS & HOOKS TAMBAHAN ===
+donjo-app/controllers/*_neural.php
+donjo-app/controllers/Bumdes_*.php
+donjo-app/hooks/RouterHookWrapper.php
+
+# === KONFIGURASI MULTI-TENANT ===
+desa/config/database.php
+desa/
+
+# === VIEWS SAAS & CUSTOM ADMIN ===
+resources/views/xosid/
+resources/views/xosid/**
+resources/views/admin/bumdes/
+resources/views/admin/auth/login.blade.php
+resources/views/admin/auth/index.blade.php
+resources/views/admin/identitas_desa/index.blade.php
+resources/views/admin/home/index.blade.php
+resources/views/admin/layouts/index.blade.php
+resources/views/admin/layouts/partials/header.blade.php
+resources/views/admin/layouts/partials/sidebar.blade.php
+resources/views/admin/layouts/partials/footer.blade.php
+resources/views/admin/layouts/partials/control_sidebar.blade.php
+resources/views/admin/layouts/partials/info.blade.php
+resources/views/admin/layouts/print_layout.blade.php
+resources/views/admin/layouts/components/notifikasi.blade.php
+resources/views/admin/layouts/components/pengumuman.blade.php
+resources/views/admin/pengguna/
+resources/views/admin/pengaturan/pengguna/
+resources/views/layanan_mandiri/
+
+# === TEMA XOSID ===
+storage/app/themes/neural-fundamental/
+storage/app/themes/seruit-lite/
+storage/app/themes/neural-fundamental/resources/views/commons/header.blade.php
+
+# === STORAGE, SCRATCH & UPLOAD ===
+storage/logs/
+storage/invoices/
+storage/uploads/
+storage/xosid_backups/
+scratch/
+uploads/
+
+# === DATABASE BASELINE ===
+xosid_neural_fully_restored_*.sql
+vendor/illuminate/database/DatabaseManager.php
+
+# === BUKU TAMU CUSTOMIZATION ===
+Modules/BukuTamu/
+assets/js/tailwind.min.js
+
+# === XOSID LOGO & BRAND OVERRIDES ===
+assets/images/opensid*
+assets/files/logo/*
+public/assets/images/*

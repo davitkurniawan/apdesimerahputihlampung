@@ -1,0 +1,37 @@
+services:
+  web:
+    build: .
+    container_name: xosid_neural_web
+    restart: unless-stopped
+    ports:
+      - "8080:80"
+    volumes:
+      - .:/var/www/html
+    networks:
+      - xosid-network
+    extra_hosts:
+      - "pantau.opensid.or.id:127.0.0.1"
+      - "pantau.opensid.my.id:127.0.0.1"
+      - "layanan.opendesa.id:127.0.0.1"
+      - "opendesa.id:127.0.0.1"
+
+  db:
+    image: mysql:8.0
+    container_name: xosid_neural_db
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: xosid
+    ports:
+      - "127.0.0.1:3307:3306"
+    volumes:
+      - xopensid_db_data:/var/lib/mysql
+    networks:
+      - xosid-network
+
+volumes:
+  xopensid_db_data:
+    external: true
+
+networks:
+  xosid-network:
