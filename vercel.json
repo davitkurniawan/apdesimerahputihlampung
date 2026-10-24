@@ -13,6 +13,10 @@
         }
       ],
       "destination": "/berita/pelantikan-akbar-dpd-apdesi-merah-putih-lampung-2026-2031"
+    },
+    {
+      "source": "/api/amp/logout",
+      "destination": "/api/amp/logout/index.html"
     }
   ]
 }

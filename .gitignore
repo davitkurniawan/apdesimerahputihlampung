@@ -166,3 +166,5 @@ xosid_backups/
 /storage/xosid_backups/
 /storage/apidesa_lampung.csv
 
+.vercel
+.env*

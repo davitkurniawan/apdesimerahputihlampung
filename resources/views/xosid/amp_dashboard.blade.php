@@ -313,7 +313,7 @@ $stat_berita = $conn->query("SELECT COUNT(*) FROM amp_berita")->fetch_row()[0] ?
             <a href="/" class="text-[11px] bg-white/10 hover:bg-white/20 px-2.5 py-1.5 rounded-lg text-white font-bold transition flex items-center gap-1">
                 <span>🌐</span> Portal
             </a>
-            <a href="/api/amp/logout" class="text-[11px] bg-red-800/80 hover:bg-red-700 px-2.5 py-1.5 rounded-lg text-red-100 font-bold transition">
+            <a href="/api/amp/logout" onclick="localStorage.removeItem('amp_user_role'); localStorage.removeItem('amp_user_name'); localStorage.removeItem('amp_logged_user'); sessionStorage.clear(); window.location.href='/login'; return false;" class="text-[11px] bg-red-800/80 hover:bg-red-700 px-2.5 py-1.5 rounded-lg text-red-100 font-bold transition">
                 🚪
             </a>
         </div>
@@ -449,7 +449,7 @@ $stat_berita = $conn->query("SELECT COUNT(*) FROM amp_berita")->fetch_row()[0] ?
             <a href="/" class="w-full flex items-center justify-center gap-2 px-3 py-2 bg-white/10 hover:bg-white/15 text-white rounded-xl text-xs font-bold transition">
                 <span>🌐</span> Portal Publik APDesi
             </a>
-            <a href="/api/amp/logout" class="w-full flex items-center justify-center gap-2 px-3 py-2 bg-red-900/60 hover:bg-red-800 border border-red-700/50 text-red-200 hover:text-white rounded-xl text-xs font-bold transition">
+            <a href="/api/amp/logout" onclick="localStorage.removeItem('amp_user_role'); localStorage.removeItem('amp_user_name'); localStorage.removeItem('amp_logged_user'); sessionStorage.clear(); window.location.href='/login'; return false;" class="w-full flex items-center justify-center gap-2 px-3 py-2 bg-red-900/60 hover:bg-red-800 border border-red-700/50 text-red-200 hover:text-white rounded-xl text-xs font-bold transition">
                 <span>🚪</span> Keluar Sistem
             </a>
         </div>
@@ -474,7 +474,7 @@ $stat_berita = $conn->query("SELECT COUNT(*) FROM amp_berita")->fetch_row()[0] ?
                 <a href="/" class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-gray-100 hover:bg-gray-200 text-gray-700 rounded-xl text-xs font-bold transition">
                     <span>🏠</span> Website Utama
                 </a>
-                <a href="/api/amp/logout" class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-red-50 hover:bg-red-100 text-red-800 border border-red-200 rounded-xl text-xs font-bold transition">
+                <a href="/api/amp/logout" onclick="localStorage.removeItem('amp_user_role'); localStorage.removeItem('amp_user_name'); localStorage.removeItem('amp_logged_user'); sessionStorage.clear(); window.location.href='/login'; return false;" class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-red-50 hover:bg-red-100 text-red-800 border border-red-200 rounded-xl text-xs font-bold transition">
                     <span>🚪</span> Keluar
                 </a>
             </div>

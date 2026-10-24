@@ -36,7 +36,7 @@ $_amp_active    = $amp_active_menu ?? "";
                         <span>Dashboard Saya</span>
                     </a>
                 <?php endif; ?>
-                <a href="/api/amp/logout" class="px-3 sm:px-4 py-2 sm:py-2.5 border border-red-200 text-red-700 hover:bg-red-50 font-semibold rounded-xl text-xs sm:text-sm transition flex items-center gap-1.5">
+                <a href="/api/amp/logout" onclick="localStorage.removeItem('amp_user_role'); localStorage.removeItem('amp_user_name'); localStorage.removeItem('amp_logged_user'); sessionStorage.clear(); window.location.href='/login'; return false;" class="px-3 sm:px-4 py-2 sm:py-2.5 border border-red-200 text-red-700 hover:bg-red-50 font-semibold rounded-xl text-xs sm:text-sm transition flex items-center gap-1.5">
                     <span>Keluar</span> 🚪
                 </a>
             <?php else: ?>
@@ -70,7 +70,7 @@ $_amp_active    = $amp_active_menu ?? "";
                     <?php if ($_amp_active !== "dashboard"): ?>
                         <a href="/dashboard" class="flex-1 py-2.5 bg-red-700 hover:bg-red-800 text-white font-semibold rounded-xl text-center text-sm transition">Dashboard Saya &rarr;</a>
                     <?php endif; ?>
-                    <a href="/api/amp/logout" class="flex-1 py-2.5 border border-red-600 text-red-700 font-semibold rounded-xl text-center text-sm transition hover:bg-red-50">Keluar</a>
+                    <a href="/api/amp/logout" onclick="localStorage.removeItem('amp_user_role'); localStorage.removeItem('amp_user_name'); localStorage.removeItem('amp_logged_user'); sessionStorage.clear(); window.location.href='/login'; return false;" class="flex-1 py-2.5 border border-red-600 text-red-700 font-semibold rounded-xl text-center text-sm transition hover:bg-red-50">Keluar</a>
                 <?php else: ?>
                     <a href="/login"      class="flex-1 py-2.5 border border-red-600 text-red-700 font-semibold rounded-xl text-center text-sm transition hover:bg-red-50">Masuk</a>
                     <a href="/registrasi" class="flex-1 py-2.5 bg-red-700 hover:bg-red-800 text-white font-semibold rounded-xl text-center text-sm transition">Daftar</a>

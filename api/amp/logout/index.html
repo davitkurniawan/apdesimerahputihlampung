@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keluar - APDESI Merah Putih Lampung</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+</head>
+<body style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; display: flex; align-items: center; justify-content: center; min-height: 100vh; margin: 0; background-color: #f8fafc; color: #1e293b;">
+    <div style="text-align: center; padding: 2.5rem; background: white; border-radius: 1.25rem; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.05), 0 8px 10px -6px rgba(0,0,0,0.05); border: 1px solid #e2e8f0; max-width: 420px; width: 90%;">
+        <div style="width: 56px; height: 56px; margin: 0 auto 1.25rem; background: #fee2e2; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.75rem;">
+            🚪
+        </div>
+        <h2 style="margin: 0 0 0.5rem 0; font-size: 1.25rem; font-weight: 700; color: #111827;">Berhasil Keluar</h2>
+        <p style="margin: 0 0 1.5rem 0; font-size: 0.875rem; color: #64748b; line-height: 1.5;">Sesi akun Anda telah diakhiri. Mengalihkan ke halaman masuk...</p>
+        <a href="/login" style="display: inline-block; padding: 0.625rem 1.25rem; background: #991b1b; color: white; text-decoration: none; border-radius: 0.75rem; font-size: 0.875rem; font-weight: 600;">Kembali ke Login</a>
+    </div>
+    <script>
+        try {
+            localStorage.removeItem('amp_user_role');
+            localStorage.removeItem('amp_user_name');
+            localStorage.removeItem('amp_logged_user');
+            sessionStorage.clear();
+        } catch (e) {
+            console.error(e);
+        }
+        setTimeout(function() {
+            window.location.replace('/login');
+        }, 500);
+    </script>
+</body>
+</html>
