@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Member - AMP Merah Putih Lampung</title>
+    <!-- Favicon APDesi Merah Putih -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/public/images/favicon_amp.png">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" href="/public/images/favicon_amp.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800 antialiased min-h-screen flex flex-col">
+<header class="bg-white/95 backdrop-blur-md sticky top-0 z-50 border-b border-gray-100 shadow-sm no-print">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
+
+        <!-- Logo & Brand -->
+        <a href="/" class="flex items-center gap-2.5 sm:gap-3 shrink-0">
+            <img src="/public/images/logo_amp.png" alt="Logo APDesi Merah Putih" class="w-9 h-12 sm:w-11 sm:h-14 object-contain filter drop-shadow">
+            <div>
+                <span class="text-[10px] sm:text-xs font-bold text-red-700 uppercase tracking-widest block leading-none">Provinsi Lampung</span>
+                <h1 class="text-base sm:text-lg font-extrabold text-gray-900 leading-tight">APDESI <span class="text-red-600">MERAH PUTIH</span></h1>
+            </div>
+        </a>
+
+        <!-- Desktop Nav -->
+        <nav class="hidden md:flex items-center gap-7 text-sm font-semibold text-gray-700">
+            <a href="/"        class="hover:text-red-700 transition-colors">Beranda</a>
+            <a href="/profil"  class="hover:text-red-700 transition-colors">Profil Organisasi</a>
+            <a href="/peta-potensi" class="hover:text-red-700 transition-colors">Peta Potensi</a>
+            <a href="/berita"  class="hover:text-red-700 transition-colors">Berita</a>
+            <a href="/agenda"  class="hover:text-red-700 transition-colors">Agenda</a>
+            <a href="/galeri"  class="hover:text-red-700 transition-colors">Galeri</a>
+            <a href="/portal-layanan" class="hover:text-red-700 transition-colors">Portal Layanan</a>
+        </nav>
+
+        <!-- CTA Kanan -->
+        <div class="flex items-center gap-2 sm:gap-3 shrink-0">
+                            <a href="/login" class="hidden sm:inline-block px-4 py-2 text-red-700 font-semibold text-sm hover:bg-red-50 rounded-xl transition">Masuk</a>
+                <a href="/registrasi" class="hidden sm:inline-block px-5 py-2.5 bg-gradient-to-r from-red-700 to-red-600 hover:from-red-800 hover:to-red-700 text-white font-semibold rounded-xl text-sm transition shadow-md shadow-red-200">Daftar Anggota</a>
+            
+            <!-- Hamburger Mobile -->
+            <button onclick="document.getElementById('amp-mobile-nav').classList.toggle('hidden')"
+                    class="md:hidden p-2 rounded-xl hover:bg-gray-100 text-gray-700 transition"
+                    aria-label="Buka Menu">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <!-- Mobile Dropdown Nav -->
+    <div id="amp-mobile-nav" class="hidden md:hidden border-t border-gray-100 bg-white">
+        <div class="max-w-7xl mx-auto px-4 py-4 flex flex-col gap-1 text-sm font-semibold">
+            <a href="/"        class="px-3 py-2.5 rounded-xl text-gray-700 hover:bg-gray-50 transition">Beranda</a>
+            <a href="/profil"  class="px-3 py-2.5 rounded-xl text-gray-700 hover:bg-gray-50 transition">Profil Organisasi</a>
+            <a href="/peta-potensi" class="px-3 py-2.5 rounded-xl text-gray-700 hover:bg-gray-50 transition">Peta Potensi</a>
+            <a href="/berita"  class="px-3 py-2.5 rounded-xl text-gray-700 hover:bg-gray-50 transition">Berita</a>
+            <a href="/agenda"  class="px-3 py-2.5 rounded-xl text-gray-700 hover:bg-gray-50 transition">Agenda</a>
+            <a href="/galeri"  class="px-3 py-2.5 rounded-xl text-gray-700 hover:bg-gray-50 transition">Galeri</a>
+            <a href="/portal-layanan" class="px-3 py-2.5 rounded-xl text-gray-700 hover:bg-gray-50 transition">Portal Layanan</a>
+                        <div class="border-t border-gray-100 mt-2 pt-3 flex gap-2">
+                                    <a href="/login"      class="flex-1 py-2.5 border border-red-600 text-red-700 font-semibold rounded-xl text-center text-sm transition hover:bg-red-50">Masuk</a>
+                    <a href="/registrasi" class="flex-1 py-2.5 bg-red-700 hover:bg-red-800 text-white font-semibold rounded-xl text-center text-sm transition">Daftar</a>
+                            </div>
+        </div>
+    </div>
+</header>
+<div class="flex-grow flex items-center justify-center p-4">
+
+    <div class="max-w-md w-full bg-white rounded-3xl shadow-xl border border-gray-200 overflow-hidden">
+        <!-- Header -->
+        <div class="bg-gradient-to-r from-red-800 to-red-900 text-white p-8 text-center flex flex-col items-center">
+            <div class="w-16 h-20 mb-3 flex items-center justify-center filter drop-shadow-md">
+                <img src="/public/images/logo_amp.png" alt="Logo APDesi Merah Putih" class="w-full h-full object-contain">
+            </div>
+            <h2 class="text-2xl font-extrabold">Login Member AMP</h2>
+            <p class="text-red-200 text-xs mt-1">Asosiasi Pemerintah Desa Indonesia Merah Putih</p>
+        </div>
+
+        <!-- Form -->
+        <form id="form-amp-login" class="p-6 space-y-4">
+            <div id="alert-box" class="hidden p-4 rounded-2xl text-xs font-medium"></div>
+
+            <div>
+                <label class="block text-xs font-semibold text-gray-700 mb-1">NIK atau Email *</label>
+                <input type="text" name="nik_or_email" required placeholder="NIK 16 digit atau email terdaftar" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-red-600 focus:border-red-600 outline-none text-sm transition">
+            </div>
+
+            <div>
+                <label class="block text-xs font-semibold text-gray-700 mb-1">Kata Sandi *</label>
+                <input type="password" name="password" required placeholder="••••••••" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-red-600 focus:border-red-600 outline-none text-sm transition">
+            </div>
+
+            <button type="submit" id="btn-submit" class="w-full py-3.5 bg-gradient-to-r from-red-700 to-red-800 hover:from-red-800 hover:to-red-900 text-white font-bold text-sm rounded-xl shadow-md shadow-red-200 transition">
+                Masuk ke Dashboard →
+            </button>
+
+            <div class="text-center pt-2">
+                <span class="text-xs text-gray-500">Belum terdaftar?</span>
+                <a href="/registrasi" class="text-xs font-bold text-red-700 hover:underline ml-1">Daftar Keanggotaan Baru</a>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('form-amp-login').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const alertBox = document.getElementById('alert-box');
+            const btn = document.getElementById('btn-submit');
+            btn.disabled = true;
+
+            const formData = new FormData(e.target);
+            const payload = {};
+            formData.forEach((val, key) => payload[key] = val);
+
+            fetch('/api/amp/login', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(payload)
+            })
+            .then(res => res.json())
+            .then(res => {
+                if (res.status === 'success') {
+                    alertBox.className = 'p-3 rounded-xl text-xs font-medium bg-emerald-100 text-emerald-800 border border-emerald-200 block';
+                    alertBox.textContent = res.message;
+                    setTimeout(() => window.location.href = res.redirect || '/dashboard', 1000);
+                } else {
+                    alertBox.className = 'p-3 rounded-xl text-xs font-medium bg-red-100 text-red-800 border border-red-200 block';
+                    alertBox.textContent = res.message || 'Login gagal.';
+                    btn.disabled = false;
+                }
+            })
+            .catch(() => {
+                alertBox.className = 'p-3 rounded-xl text-xs font-medium bg-red-100 text-red-800 border border-red-200 block';
+                alertBox.textContent = 'Gagal terhubung ke server.';
+                btn.disabled = false;
+            });
+        });
+    </script>
+</div>
+</body>
+</html>
