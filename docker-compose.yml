@@ -1,6 +1,8 @@
 services:
   web:
-    build: .
+    build:
+      context: .
+      dockerfile: Dockerfile.local
     container_name: xosid_neural_web
     restart: unless-stopped
     ports:
